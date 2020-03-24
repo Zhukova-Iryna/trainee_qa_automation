@@ -5,27 +5,27 @@ import rest_api.petshop.OrderStatus;
 import java.util.Objects;
 
 public class OrderDto {
-    int id;
-    int petId;
+    long id;
+    long petId;
     int quantity;
     String shipDate;
-    String status;
+    OrderStatus status;
     boolean complete;
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public OrderDto setId(int id) {
+    public OrderDto setId(long id) {
         this.id = id;
         return this;
     }
 
-    public int getPetId() {
+    public long getPetId() {
         return petId;
     }
 
-    public OrderDto setPetId(int petId) {
+    public OrderDto setPetId(long petId) {
         this.petId = petId;
         return this;
     }
@@ -48,12 +48,17 @@ public class OrderDto {
         return this;
     }
 
-    public OrderStatus getStatus() {
-        return OrderStatus.valueOf(status);
+    public String getStatus() {
+        return status.getTitle();
     }
 
     public OrderDto setStatus(OrderStatus status) {
-        this.status = status.name();
+        this.status = status;
+        return this;
+    }
+
+    public OrderDto setStatus(String status) {
+        this.status = OrderStatus.valueOf(status.toUpperCase());
         return this;
     }
 
@@ -80,6 +85,6 @@ public class OrderDto {
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getPetId(), getQuantity(), getStatus(), isComplete());
+        return Objects.hash(getId());
     }
 }

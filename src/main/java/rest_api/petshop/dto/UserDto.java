@@ -1,7 +1,7 @@
 package rest_api.petshop.dto;
 
 public class UserDto {
-    int id;
+    long id;
     String username;
     String firstName;
     String lastName;
@@ -10,11 +10,11 @@ public class UserDto {
     String phone;
     int userStatus;
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public UserDto setId(int id) {
+    public UserDto setId(long id) {
         this.id = id;
         return this;
     }

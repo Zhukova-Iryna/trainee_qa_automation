@@ -1,16 +1,16 @@
 package rest_api.petshop;
 
 public class Category {
-    int id;
+    long id;
     String name;
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public Category setId(int id) {
+    public Category setId(long id) {
         this.id = id;
-        return new Category();
+        return this;
     }
 
     public String getName() {
@@ -19,6 +19,6 @@ public class Category {
 
     public Category setName(String name) {
         this.name = name;
-        return new Category();
+        return this;
     }
 }

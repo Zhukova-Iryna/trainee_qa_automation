@@ -12,7 +12,7 @@ public class PetDto {
     String name;
     String[] photoUrls;
     Tags[] tags;
-    String status;
+    PetStatus status;
 
     public long getId() {
         return id;
@@ -59,12 +59,17 @@ public class PetDto {
         return this;
     }
 
-    public PetStatus getStatus() {
-        return PetStatus.valueOf(status);
+    public String getStatus() {
+        return status.getTitle();
     }
 
     public PetDto setStatus(PetStatus status) {
-        this.status = status.name();
+        this.status = status;
+        return this;
+    }
+
+    public PetDto setStatus(String status) {
+        this.status = PetStatus.valueOf(status.toUpperCase());
         return this;
     }
 
@@ -81,6 +86,6 @@ public class PetDto {
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getCategory(), getName(), getStatus());
+        return Objects.hash(getId());
     }
 }
