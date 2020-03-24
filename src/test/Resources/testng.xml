@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- TestNG configuration -->
+<suite name="API testing">
+    <test name="Pet Shop API test">
+        <packages>
+            <package name="rest_api" />
+        </packages>
+        <classes>
+            <class name="rest_api.petshop_test.PetTest" />
+            <class name="rest_api.petshop_test.UserTest" />
+            <class name="rest_api.petshop_test.OrderTest" />
+        </classes>
+    </test>
+</suite>
