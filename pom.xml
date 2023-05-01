@@ -9,7 +9,7 @@
         <allure-rest-assured.version>2.13.0</allure-rest-assured.version>
         <allure-testng.version>2.13.2</allure-testng.version>
         <selenide.version>5.7.0</selenide.version>
-        <testng.version>7.1.0</testng.version>
+        <testng.version>7.7.0</testng.version>
         <lombok.version>1.18.10</lombok.version>
         <rest-assured.version>4.3.0</rest-assured.version>
         <assertj.version>3.15.0</assertj.version>
